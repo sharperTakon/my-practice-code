@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>we dont stop</title>
+
+    <style>
+      .gaming {
+        background-color: rgb(13, 13, 13);
+        color: white;
+        padding: 7px 15px;
+      }
+
+      .is-toggled{
+        background-color: gray;
+        color: white;
+        padding: 7px 15px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <button onclick="
+      toggleButton('js-game');
+    " class="gaming  js-game">Gaming</button>
+
+    <button onclick="
+      toggleButton('js-music');
+    " class="gaming js-music">music</button>
+
+    
+    <button onclick="
+      toggleButton('js-tech');
+    " class="gaming js-tech">Tech</button>
+
+    
+    <script>
+      //buttonElement = document.querySelector('.js-button').classList.contains('js-button');
+      //console.log(buttonElement);
+
+      function toggleButton(Select) {
+        const button = document.querySelector('.' + Select);
+          //after we click the second button and the first one does not have the is-toggled class we turn it OFF
+        if (!button.classList.contains('is-toggled')) {
+          turnOfPreviousButton();
+          //we turn the next button on
+          button.classList.add('is-toggled');
+        } else {
+          button.classlist.remove('is-toggled');
+        }
+      }
+     
+      function turnOfPreviousButton() {
+        const preButton = document.querySelector('.is-toggled');
+        if (preButton) {
+          preButton.classList.remove('is-toggled');
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+
+    <script>
+      /*function greet (name) {
+        if (!name) {
+          console.log('hi there');
+        } else console.log(`hello ${name}`)
+      }
+      
+        greet();
+        greet('aloy');*/
+
+        
+      
+        function convertToFahrenheit (celsius) {
+          /*return in function helps run calculation before we console.log it */
+          return(celsius * 9 / 5) + 32;
+        }
+
+        function convertToCelsius (fahrenheit) {
+          return (fahrenheit -32) * 5/9;
+        }
+
+        function convertTemperature(degree, unit) {
+          if (unit === 'C') {
+            /*i saved the result = convertToFehrenheit degree cos we are converting 25 'Celsius' to farehrenheit*/
+            const result = convertToFahrenheit(degree)
+            /*then i return result so i can console.log it*/
+            return `${result}F`
+
+          } else if (unit === 'F') {
+            const result = convertToCelsius(degree)
+            return`${result}C`
+          }
+        }
+
+        console.log(convertTemperature(25,'C'));
+        console.log(convertTemperature(86,'F'));
+        
+
+    </script>
+
+  </body>
+</html>

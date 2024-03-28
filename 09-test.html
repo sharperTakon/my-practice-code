@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+      <!--<button class="js-heads" onclick="
+        headsUpdate();
+      ">heads</button>
+
+      <button class="js-tails" onclick="
+        tailsUpdate();
+      ">tails</button>
+
+      <p class="js-result"></p>
+
+      <input class="js-input" placeholder="Name"
+      
+      onkeydown="nameKeyDown(event);
+      ">
+
+      <button class="js-submit-button" onclick="
+        nameDisplay();
+      ">Submit</button>
+
+      <p class="js-result"></p>
+
+      <p>Amazon Shippping Calculator</p>
+
+      <input placeholder="cost of oder" 
+      class="js-cost-input" onkeydown="
+        handleCostKeyDown(event);
+      ">
+  
+      <button onclick="
+        calculateTotal();
+      ">Calculate</button>
+  
+      <p class="js-total-cost"></p
+
+      <input placeholder="Type something" class="js-input-test" onkeyup="
+        keyupUpdate();
+      ">
+
+      <p class="js-result"></p>
+
+      <button class="js-button0" onclick="
+        cartQuantity = (0);
+        cartQuantityUpdate(cartQuantity);
+      ">Show Quantity</button>
+
+      <button onclick="
+        cartQuantityUpdate(1);
+      ">Add to cart</button>
+
+      <button onclick="
+        cartQuantityUpdate(2);
+      ">+2</button>
+
+      <button onclick="
+        cartQuantityUpdate(3);
+      ">+3</button>
+
+      <button onclick="
+        cartQuantityUpdate(4);
+      ">+4</button>
+
+      <button onclick="
+        cartQuantityUpdate(+5);
+      ">+5</button>
+
+      <button onclick="
+        cartQuantityUpdate(-1);
+      ">Remove from cart</button>
+
+      <button onclick="
+        cartQuantityUpdate(-2);
+      ">-2</button>
+
+      <button onclick="
+        cartQuantityUpdate(-3);
+      ">-3</button>
+
+      <p class="js-result"></p>>-->
+
+      <p class="js-result"></p>
+
+      <div style="margin-bottom: 10px;">
+        <button onclick="
+          calculatorUpdate('1');
+        ">1</button>
+        <button onclick="
+          calculatorUpdate('2');
+        ">2</button>
+        <button onclick="
+          calculatorUpdate('3');
+        ">3</button>
+        <button onclick="
+          calculatorUpdate('+');
+        ">+</button>
+      </div>
+
+      
+      <button onclick="
+        calculatorUpdate('4');
+      ">4</button>
+      <button onclick="
+        calculatorUpdate('5');
+      ">5</button>
+      <button onclick="
+        calculatorUpdate('6');
+      ">6</button>
+      <button onclick="
+        calculatorUpdate('-')
+      ">-</button>
+      <button onclick="
+        calculator = eval(calculator)
+        resultUpdate();
+        localStorage.setItem('calculator', calculator);
+      ">=</button>
+
+    <script>
+      let calculator = localStorage.getItem('calculator') || '';
+
+//this display the last calculation when the page first load
+      resultUpdate();
+
+
+      function calculatorUpdate(value) {
+        calculator += value;
+
+        resultUpdate();
+
+       localStorage.setItem('calculator', calculator);
+      };
+
+      function resultUpdate() {
+        document.querySelector('.js-result')
+          .innerHTML = `${calculator}`
+      }
+
+
+       /* 
+//always add a number to the javascript so that the computer can do maths      
+      let cartQuantity = 0;
+
+
+      function cartQuantityUpdate (value) {
+        cartQuantity += value;
+        
+        document.querySelector('.js-result')
+          .innerHTML = `cart Quantity: ${cartQuantity}`
+          
+      };
+
+      function keyupUpdate () {
+//i created a function then created a variable called inputElement and add the input name to it by using document.
+        const inputElement = document.querySelector('.js-input-test')
+//i created the variable called text then saved the value in the input element to it by using inputElement.value 
+        let text = inputElement.value
+//then i saved it to js-result so it can display on webpage
+        document.querySelector('.js-result')
+          .innerHTML = `${text}`
+      }
+  
+      function handleCostKeyDown(event) {
+        if (event.key === 'Enter') {
+          calculateTotal();
+        }
+      }
+
+      function calculateTotal () {
+        const inputElement = document.querySelector('.js-cost-input');
+//this retrives the value in the input and convert it to a number using Number() then convert the number to cent by * 100 
+        let cost = Number(inputElement.value) * 100;
+
+//this checks if calculated cost is less than 4000 cent(or $40) if it is then 1000 cents(or $10)is is added to the cost
+        if (cost < 4000) {
+          cost = cost + 1000;
+        };
+        document.querySelector('.js-total-cost')
+        .innerHTML = `$${cost / 100}`;   
+      }
+       
+//we create a function for the onkeydown but the onkeydown atribute goes to the input element
+
+      function nameKeyDown(event) {
+        if (event.key === 'Enter') {
+          nameDisplay();
+        }
+      };
+
+      function nameDisplay() {
+        const nameElement = document.querySelector('.js-input');
+        let text = (nameElement.value)
+        document.querySelector('.js-result')
+          .innerHTML = `Your name is: ${text}`
+      }; 
+
+
+
+   function headsUpdate() {
+        const heads = document.querySelector('.js-heads');
+        if (heads.innerHTML === 'heads') 
+          document.querySelector('.js-result')
+          .innerHTML = 'You chose: heads';
+      }
+
+      function tailsUpdate() {
+        const tails = document.querySelector('.js-tails');
+        if (tails.innerHTML === 'tails') 
+          document.querySelector('.js-result')
+          .innerHTML = 'You chose: tails';
+      }*/
+
+
+    </script>
+  </body>
+</html>

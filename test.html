@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>test</title>
+  </head>
+  <body>
+
+    <button onclick="
+      calculationUpdate('2');
+    ">2</button>
+    <button onclick="
+      calculationUpdate('3');
+    ">3</button>
+    <button onclick="
+      calculationUpdate('+');
+    ">+</button>
+
+    <button onclick="
+      calculation = eval(calculation);
+      console.log(calculation);
+      localStorage.setItem('calculator', calculation);
+    ">=</button>
+
+    <button onclick="
+      calculationUpdate('*');
+    ">*</button>
+
+    <button onclick="
+      calculationUpdate('/');
+    ">/</button>
+
+    <button onclick="
+    
+      calculation = '';
+      console.log(calculation);
+      localStorage.setItem('calculator', calculation);
+    ">reset</button>
+
+    <script>
+      let calculation = localStorage.getItem('calculator') || '';
+
+      function calculationUpdate (value) {
+        calculation += value;
+        console.log(calculation);
+
+        localStorage.setItem('calculator', calculation);
+      };
+
+      /*const product = {
+          name: 'basketball',
+          price: 2095
+        }
+
+      console.log(product);
+      
+      product.price = 500;
+      console.log(product);
+
+      product ['delivery-time'] = '3days';
+      console.log(product);
+    }
+
+    function comparePrice(product1, product2) {
+      if (product1 < product2) {
+        return product1
+      }else {
+        return product2
+      }
+    }
+
+    const product1 = {
+      name: 'basketball',
+      price: 2000
+    }
+
+    const product2 = {
+      name: 'football',
+      price: 3000
+    }
+
+    console.log(comparePrice(product1,product2));
+
+  // this is how to compare two variables
+   function isSameProduct(product1, product2) {
+      if (product1.name === product2.name && 
+      product1.price === product2.price) {
+        return true;
+      } else {
+        return false;
+      } 
+   }
+
+   const product1 = {
+    name: 'basketball',
+    price: 2000
+   };
+  
+   const product2 = {
+    name: 'basketball',
+    price: 2000
+   }
+
+   const product3 = {
+    name: 'basketball',
+    price: 20
+   }
+   
+
+   console.log(isSameProduct(product1,product2));
+   console.log(isSameProduct(product1,product3));
+
+   // this is how to convert a string to all lower case
+   let originalString = 'GOOd Morning';
+   let toLowerCase = originalString.toLowerCase();
+
+   console.log(toLowerCase);
+
+   // this is how to repeat strings many times
+   let FirstString = 'test';
+   let secondString = FirstString.repeat(2);
+
+   console.log(secondString);*/
+
+   
+
+    </script>
+  </body>
+</html>

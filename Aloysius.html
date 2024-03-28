@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+
+    <script>
+
+      /*const words = ['hello', 'world', 'search', 'good', 'search'];
+
+      for(let i = 0; i < words.length; i++) {
+        const wordValue = words[i];
+        
+        if(wordValue === 'search') {
+          console.log(i)
+          break;
+        }
+      }
+
+
+
+      const names = ['not', 'found']
+      const numIndex = -1;
+
+      for (let i = 0; i < names.length; i++) {
+        const nameValue = names[i];  
+
+        if (nameValue === 'search') {
+          console.log(i)
+        } else {
+          console.log(numIndex)
+        }
+      }
+
+      function findIndex (array, word) {
+
+        for(let i = 0; i < array.length; i++){
+
+          if(array[i] === word) {
+            return i;
+          }
+        }
+        return -1;
+      }
+
+      const array1 = ['green', 'red', 'blue', 'red'];
+      const result1 = findIndex(array1, 'red');
+
+      const array2 = ['green', 'red', 'blue', 'red'];
+      const result2 = findIndex(array2, 'yellow');
+
+      console.log(result1);
+      console.log(result2);
+
+
+      const list = [];
+
+     function removeEgg(foods) {
+
+      for(let i = 0; i < foods.length; i++) {
+        const name = foods[i];
+        if (name === 'egg') {
+          continue;
+        } else {
+          list.push(name)
+        }
+      }
+      return list;
+     }
+      console.log(result2);
+     console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+
+     const newList = [];
+     let eggNumber = 0;
+
+     function removeEgg(foods) {
+       for (let i = 0; i < foods.length; i++) {
+        const name = foods[i];
+
+        //this check if egg is in the list and tell it that there are fewer than 2 egg encountered and can include the one left in the array
+        if (name === 'egg' && eggNumber < 2) {
+          eggNumber++ 
+          continue;
+        } else {
+          newList.push(name);
+        }
+       }
+       return newList;
+     }
+
+     console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+
+     const result = [];
+     let eggCount = 0;
+
+     function removeEgg(foods) {
+
+    //this help us keep the original code after we use reverse
+      //const foodcopy = foods.slice();
+      //const reversedList = foodcopy.reverse();
+      const reversedList = foods.slice().reverse(); 
+
+      for (let i = 0; i < reversedList.length; i++) {
+        const name = foods[i];
+        if (name === 'egg' && eggCount < 2) {
+          eggCount++
+          continue;
+        }
+        result.push(name);
+      }
+       
+        return result.reverse();
+     }
+     
+    const foods = ['egg', 'apple', 'egg', 'egg', 'ham'];
+
+    console.log(removeEgg(foods))
+    console.log(foods)
+
+
+    for(let i = 1; i <= 20; i++) {
+      if (i % 3 === 0 ) {
+
+        console.log('fizz');
+      } else if (i % 5 === 0) {
+        console.log('buzz');
+      } else if (i % 3 && i % 5 === 0) {
+        console.log('fizzBuzz')
+      } else {
+        console.log(i)
+      }
+    }
+
+    
+    function findIndex (array, word) {
+
+      for(let i = 0; i < array.length; i++){
+
+        if(array[i] === word) {
+          return i;
+        }
+      }
+      return -1;
+    };
+
+    function unique(array) {
+      const result = [];
+
+      for(let i = 0; i < array.length; i++) {
+        const name = array[i];
+        if (findIndex(result, name) === -1) {
+          result.push(name);
+        }
+      }
+      return result;
+    }
+     
+    console.log(unique(['green', 'red', 'blue', 'red']));
+    console.log(unique(['red', 'green', 'green', 'red']));*/
+
+    for(let i = 1; i <= 20; i++) {
+
+      if (i % 3 === 0 ) {
+        console.log('fizz');
+      } else if (i % 5 === 0) {
+        console.log('buzz');
+      } else if (i % 3 && 1 % 5 === 0) {
+        console.log('fizzBuzz');
+      } else console.log(i);
+    };
+    
+    </script>
+  </body>
+</html> 

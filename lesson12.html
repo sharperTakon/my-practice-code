@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>lesson 12</title>
+  </head>
+  <body>
+
+
+    <script>
+      /*
+      //const multiply = (value, num) => value * num
+
+      //console.log(multiply(2, 3));
+      //console.log(multiply(7, 10));
+
+     
+      function countPositive(nums) {
+
+        let count = 0;
+
+        nums.forEach((numbers) => {
+          if (numbers > 0) {
+            count ++
+          }
+        })
+        return count;
+
+      }
+      console.log(countPositive([1, -3, 5]));
+      console.log(countPositive([-2, 3, -5, 7, 10]));
+     
+
+
+
+      function addNum(array, num) {
+       const result = array.map((number, index) => {
+          return number + num;
+        });
+        return result;
+      }
+
+      console.log(addNum([1, 2, 3], 2));
+      console.log(addNum([-2, -1, 0, 99], 2));
+      
+
+       function removeEgg(foods) {
+        let names = foods.filter((fruits) => {
+
+          if (fruits !=='egg') {
+            return foods;
+          }
+        });
+        return names;
+       }
+
+       console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+      */
+
+      function removeEgg(foods) {
+        let egg = 0;
+        
+        return foods.filter((fruits, index) => {
+
+          if (fruits === 'egg' && egg < 2) {
+            egg++
+            return false 
+          }
+          return true;
+        });
+       }
+
+       console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+
+
+
+
+    </script>
+  </body>
+</html>   

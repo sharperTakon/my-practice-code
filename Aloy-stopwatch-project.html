@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aloy stopwatch project</title>
+
+    <style>
+
+      .content {
+      font-size: 67px;
+      display: flex;
+      margin-top: 20px;
+    }
+
+    .sec,.min,.hour {
+        margin-right: 10px;
+        vertical-align: top;
+        display: inline-block;
+        margin-top: 5px;
+      }
+
+      .middle {
+        margin-right: 10px;
+        vertical-align: top;
+        display: inline-block;
+      }
+
+      .start {
+        font-size: 12px;
+        padding: 8px 15px 8px 15px;
+        margin-left: 80px;
+        background-color: green;
+      }
+
+      .stop {
+        font-size: 12px;
+        padding: 8px 15px 8px 15px;
+        background-color: rgb(157, 24, 24);
+        color: white;
+      }
+ 
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="sec js-sec">00</div>
+      <div class="middle">:</div>
+      <div class="min js-min">00</div>
+      <div class="middle">:</div>
+      <div class="hour js-hour">00</div>
+    </div>
+
+    <button class="js-start-button start">Start</button>
+    <button class="js-stop-button stop">Stop</button>
+   
+
+    <script>
+
+      let seconds = 0;
+      let minutes = 0;
+      let hours = 0;
+
+      let intervalId;
+
+      const limit = 59;
+
+      document.querySelector('.js-start-button').addEventListener('click', () => {
+        intervalId = setInterval(() => {
+          moveTime();
+        }, 1000);
+      });
+
+      document.querySelector('.js-stop-button').addEventListener('click', () => {
+        clearInterval(intervalId);
+        seconds = 0;
+        minutes = 0;
+        hours = 0;
+        updateDisplay();
+      });
+     
+
+      const moveTime = () => {
+       seconds++; 
+       if(seconds > limit) {
+        seconds = 0;
+        minutes++;
+       }
+
+       if (minutes > limit) {
+        minutes = 0;
+        hours++;
+       }
+       updateDisplay();
+      }
+
+
+      const updateDisplay = () => {
+
+        const formattedSeconds = seconds < 10 ? `0${seconds}` : seconds;
+        const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
+        const formattedHours = hours < 10 ? `0${hours}` : hours;
+
+        document.querySelector('.js-sec').innerHTML = formattedSeconds;
+        document.querySelector('.js-min').innerHTML = formattedMinutes;
+        document.querySelector('.js-hour').innerHTML = formattedHours;
+
+      }
+
+      
+    </script>
+  </body>
+</html>
